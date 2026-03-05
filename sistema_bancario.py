@@ -1,4 +1,4 @@
-//Exercicio resolvido da formação Python AI Developer Hands On
+# Exercicio resolvido da formação Python AI Developer Hands On
 
 menu = """
 
