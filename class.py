@@ -1,11 +1,12 @@
 def main():
     class Car:
-        def __init__(self, name: str, brand: str, color: str, year: int, is_new: bool):
+        def __init__(self, name: str, brand: str, color: str, year: int, is_new: bool,country:str):
             self.name = name
             self.brand = brand
             self.color = color
             self.year = year
             self.is_new = is_new
+            self.country=country
 
             min_year = 1950
             max_year = 2025
@@ -23,7 +24,7 @@ def main():
                 )
 
         def drive(self):
-            print(f"I'm driving a {self.year} {self.color} {self.brand} {self.name}.")
+            print(f"I'm driving a {self.year} {self.color} {self.brand} {self.name} from {self.country}.")
 
     class SportsCar(Car):
         # This class inherits everything from Car.
@@ -31,16 +32,16 @@ def main():
         pass
 
     try:
-        fox = Car("Fox", "Volkswagen", "Red", 2015, False)
+        fox = Car("Fox", "Volkswagen", "Red", 2015, False,"USA")
         fox.drive()
 
-        cobalt = Car("Cobalt", "Chevrolet", "Black", 2023, True)
+        cobalt = Car("Cobalt", "Chevrolet", "Black", 2023, True,"Mexico")
         cobalt.drive()
 
-        pajero = SportsCar("Pajero", "Mitsubishi", "Silver", 2005, False)
+        pajero = SportsCar("Pajero", "Mitsubishi", "Silver", 2005, False,"Japan")
         pajero.drive()
 
-        lancer = SportsCar("Lancer Evolution", "Mitsubishi", "White", 2008, False)
+        lancer = SportsCar("Lancer Evolution", "Mitsubishi", "White", 2008, False,"Japan")
         lancer.drive()
 
         # Examples that would raise errors:
